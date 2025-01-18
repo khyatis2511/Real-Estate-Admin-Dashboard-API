@@ -1,9 +1,10 @@
-```markdown
-# Admin Dashboard Backend - Node.js with Express
 
-This README provides detailed information about the backend implementation of the Admin Dashboard for a real estate website. The backend is built using **Node.js** and **Express** and handles core functionality for user management, analytics, and activity tracking.
+# Real Estate Admin Dashboard API
 
----
+This README provides detailed information about 
+the backend implementation of the Admin Dashboard for a real estate website.
+The backend is built using **Node.js** and **Express** and handles core
+functionality for user management, analytics, and activity tracking.
 
 ## **Features**
 
@@ -31,7 +32,6 @@ This README provides detailed information about the backend implementation of th
   - Only admin users can access the dashboard.
 - Middleware for securing routes.
 
----
 
 ## **Tech Stack**
 
@@ -46,7 +46,6 @@ This README provides detailed information about the backend implementation of th
 ### **Authentication**
 - JSON Web Tokens (JWT) for secure authentication and authorization.
 
----
 
 ## **Installation**
 
@@ -66,10 +65,11 @@ This README provides detailed information about the backend implementation of th
    ```
 3. Install dependencies:
    ```bash
-   yarn add
+   yarn or yarn install
    ```
 4. Configure environment variables:
    - Create a `.env` file in the root directory with the following variables:
+
      ```plaintext
      PORT=3088
      DATABASE_URL=db-url
@@ -87,7 +87,6 @@ This README provides detailed information about the backend implementation of th
    yarn run start or yarn start
    ```
 
----
 
 ## **Folder Structure**
 
@@ -102,7 +101,6 @@ src/
 ├── server.ts          # Entry point
 ```
 
----
 
 ## **Scripts**
 
@@ -112,16 +110,9 @@ src/
 - `yarn run lint`: Checks for linting issues using ESLint.
 - `yarn run test`: Runs tests using Jest.
 
----
-
-## **License**
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## **Contact**
 
 For inquiries or support, contact: [khyatis2511@gmail.com]
-```
+
 

@@ -77,11 +77,12 @@ const authService = {
     }
   },
   whoAmI: async (req: Request) => {
+    const user = (req as any).user
     try {
-      const userData = await prisma.user.findUnique({where: {id: req.body.id }});
+      const userData = await prisma.user.findUnique({where: {id: user.userId,}});
       if (userData) {
-        const { id, firstName, lastName, email } = userData;
-        return returnRes(200, msgs.dataSent, { id, firstName, lastName, email });
+        const { id, firstName, lastName, email, role } = userData;
+        return returnRes(200, msgs.dataSent, { id, firstName, lastName, email, role });
       }
       return returnRes(400, msgs.somethingWrong);
     } catch (error: any) {

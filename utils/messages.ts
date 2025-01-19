@@ -9,7 +9,7 @@ export const returnRes = (
   data,
 });
   
-  // ---- message ----
+// ---- message ---- //
   
 export const msgs = {
   somethingWrong: 'Something went wrong. Try again!',
@@ -23,5 +23,13 @@ export const msgs = {
   loggedOut: 'Logout successfully',
   agent : {
     create : "Agent created successfully."
-  }
+  },
+  jwt: {
+    tokenMissing: "Token is missing.",
+    tokenExpired: "Token has expired.",
+    invalidToken: "Token invalid.",
+    authMissing: "Authorization header is missing."
+  },
+  validationError: 'Validation Error',
+  noAccess: 'Access denied. You do not have the necessary permissions.'
 };

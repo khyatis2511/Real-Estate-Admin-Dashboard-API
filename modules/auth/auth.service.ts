@@ -60,10 +60,10 @@ const authService = {
       const token = jwtService.generateToken({ userId: user.id, role: user.role }, '1h' );
 
       await prisma.activityLogs.create({
-          data: {
-              userId: user.id,
-              actionType: ActionType.Login,
-          }
+        data: {
+          userId: user.id,
+          actionType: ActionType.Login,
+        }
       });
 
       return returnRes(200, msgs.loggedIn, { token, userData : {

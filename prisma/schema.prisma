@@ -44,7 +44,7 @@ model User {
   createdAt       DateTime          @default(now())
   updatedAt       DateTime          @updatedAt
   userHasPassword UserHasPassword[]
-  activityLogs     ActivityLogs[]
+  activityLogs    ActivityLogs[]
 }
 
 model UserHasPassword {
@@ -62,10 +62,10 @@ model ActivityLogs {
   userId     String     @db.ObjectId
   sessionId  String?
   actionType ActionType // Type of action: login, logout, download, pageView
-  target     String? // Specific target of the action (e.g., downloaded file or page URL)
+  target     String?    // Specific target of the action (e.g., downloaded file or page URL)
   activityAt DateTime   @default(now())
-  metadata   Json? // Optional additional information (e.g., device info, referrer, count etc.)
-  ipAddress  String? // IP address of the user
+  metadata   Json?      // Optional additional information (e.g., device info, referrer, count etc.)
+  ipAddress  String?    // IP address of the user
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
 }

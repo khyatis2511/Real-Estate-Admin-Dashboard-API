@@ -73,7 +73,7 @@ functionality for user management, analytics, and activity tracking.
      ```plaintext
      PORT=3088
      DATABASE_URL=db-url
-     JWT_SECRET=your_jwt_secret
+     SECRET_KEY=your_jwt_secret
      NODE_ENV=development
      ```
 5. Start the server in development mode:

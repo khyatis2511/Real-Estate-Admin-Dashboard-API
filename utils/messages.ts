@@ -19,10 +19,22 @@ export const msgs = {
   loggedIn: 'Login successfully.',
   unauthorized: 'You are unauthorized.',
   dataSent: 'Data sent successfully',
+  notFound: 'Not Found!',
   logoutFailed: 'Logout failed',
   loggedOut: 'Logout successfully',
   agent : {
     create : "Agent created successfully."
+  },
+  analytics : {
+    fetched: 'Analytics Logs fetched successfully.'
+  },
+  activityLogs: {
+    create: "Activity Log created Successfully.",
+    fetched: 'Activity Logs fetched successfully.'
+  },
+  user: {
+    statusUpdated: 'User Status updated successfully.',
+    userFetched: 'Users fetched successfully.'
   },
   jwt: {
     tokenMissing: "Token is missing.",

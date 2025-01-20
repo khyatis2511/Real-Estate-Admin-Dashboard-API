@@ -105,6 +105,27 @@ const authService = {
       console.error('[ logout error : ]',error);
     }
   },
+  updateUserStatus: async (req: Request) => {
+    const user = (req as any).user
+    try {
+      const userData = await prisma.user.findUnique({where: {id: user.userId,}});
+      if (userData) {
+        const updatedUserData = await prisma.user.update({
+          where: {id: user.userId},
+          data: {status: req.body.status}
+        });
+
+        if(updatedUserData) {
+          return returnRes(200, msgs.user.statusUpdated);
+        }
+        return returnRes(400, msgs.somethingWrong);
+      }
+      return returnRes(400, msgs.notFound);
+    } catch (error: any) {
+      console.error('[ whoAmI error : ]',error);
+      return returnRes(400, msgs.somethingWrong);
+    }
+  },
 };
 
 export default authService;

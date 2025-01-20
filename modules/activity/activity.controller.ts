@@ -16,9 +16,8 @@ const activityController = {
     },
   ],
   getActivityLogs: [
-    // checkRole([Role.Admin]),
+    checkRole([Role.Admin]),
     (req: Request, res: Response) => {
-      console.log('----comes here')
       activity.getActivityLogs(req).then((result) => {
         res.status(result.statusCode).send(result).end();
       });
